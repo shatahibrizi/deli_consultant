@@ -1,77 +1,26 @@
 @extends('layouts.app')
 
-@section('title', 'Home - Logis')
+@section('title', 'Layanan - Logis')
 
-@section('body_class', 'index-page')
+@section('body_class', 'services-page')
 
 @section('content')
     <main class="main">
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero section dark-background">
-
-            <img src="assets/img/world-dotted-map.png" alt="" class="hero-bg" data-aos="fade-in">
-
-            <div class="container">
-                <div class="row gy-4 d-flex justify-content-between">
-                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                        <h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
-                        <p data-aos="fade-up" data-aos-delay="100">Facere distinctio molestiae nisi fugit tenetur repellat
-                            non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum
-                            voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
-
-                        <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
-                            data-aos-delay="200">
-                            <input type="text" class="form-control" placeholder="Your ZIP code or City. e.g. New York">
-                            <button type="submit" class="btn btn-primary">Search</button>
-                        </form>
-
-                        <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
-
-                            <div class="col-lg-3 col-6">
-                                <div class="stats-item text-center w-100 h-100">
-                                    <span data-purecounter-start="0" data-purecounter-end="232"
-                                        data-purecounter-duration="0" class="purecounter">232</span>
-                                    <p>Clients</p>
-                                </div>
-                            </div><!-- End Stats Item -->
-
-                            <div class="col-lg-3 col-6">
-                                <div class="stats-item text-center w-100 h-100">
-                                    <span data-purecounter-start="0" data-purecounter-end="521"
-                                        data-purecounter-duration="0" class="purecounter">521</span>
-                                    <p>Projects</p>
-                                </div>
-                            </div><!-- End Stats Item -->
-
-                            <div class="col-lg-3 col-6">
-                                <div class="stats-item text-center w-100 h-100">
-                                    <span data-purecounter-start="0" data-purecounter-end="1453"
-                                        data-purecounter-duration="0" class="purecounter">1453</span>
-                                    <p>Support</p>
-                                </div>
-                            </div><!-- End Stats Item -->
-
-                            <div class="col-lg-3 col-6">
-                                <div class="stats-item text-center w-100 h-100">
-                                    <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="0"
-                                        class="purecounter">32</span>
-                                    <p>Workers</p>
-                                </div>
-                            </div><!-- End Stats Item -->
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                        <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="">
-                    </div>
-
-                </div>
+        <!-- Page Title -->
+        <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
+            <div class="container position-relative">
+                <h1>Services</h1>
+                <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam
+                    molestias.</p>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Services</li>
+                    </ol>
+                </nav>
             </div>
-
-        </section><!-- /Hero Section -->
+        </div><!-- End Page Title -->
 
         <!-- Featured Services Section -->
         <section id="featured-services" class="featured-services section">
@@ -119,59 +68,6 @@
             </div>
 
         </section><!-- /Featured Services Section -->
-
-        <!-- About Section -->
-        <section id="about" class="about section">
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <img src="assets/img/about.jpg" class="img-fluid" alt="">
-                        <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
-                    </div>
-
-                    <div class="col-lg-6 content order-last  order-lg-first" data-aos="fade-up" data-aos-delay="100">
-                        <h3>About Us</h3>
-                        <p>
-                            Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti.
-                            Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius
-                            incidunt reiciendis veritatis asperiores placeat.
-                        </p>
-                        <ul>
-                            <li>
-                                <i class="bi bi-diagram-3"></i>
-                                <div>
-                                    <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                                    <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="bi bi-fullscreen-exit"></i>
-                                <div>
-                                    <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                                    <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata
-                                        redi</p>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="bi bi-broadcast"></i>
-                                <div>
-                                    <h5>Voluptatem et qui exercitationem</h5>
-                                    <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime
-                                        veniam</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- /About Section -->
 
         <!-- Services Section -->
         <section id="services" class="services section">
@@ -258,27 +154,6 @@
             </div>
 
         </section><!-- /Services Section -->
-
-        <!-- Call To Action Section -->
-        <section id="call-to-action" class="call-to-action section dark-background">
-
-            <img src="assets/img/cta-bg.jpg" alt="">
-
-            <div class="container">
-                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="col-xl-10">
-                        <div class="text-center">
-                            <h3>Call To Action</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                mollit anim id est laborum.</p>
-                            <a class="cta-btn" href="#">Call To Action</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section><!-- /Call To Action Section -->
 
         <!-- Features Section -->
         <section id="features" class="features section">
@@ -378,73 +253,6 @@
             </div>
 
         </section><!-- /Features Section -->
-
-        <!-- Pricing Section -->
-        <section id="pricing" class="pricing section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <span>Pricing</span>
-                <h2>Pricing</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="pricing-item">
-                            <h3>Free Plan</h3>
-                            <h4><sup>$</sup>0<span> / month</span></h4>
-                            <ul>
-                                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span>
-                                </li>
-                                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="buy-btn">Buy Now</a>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="pricing-item featured">
-                            <h3>Business Plan</h3>
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
-                                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                            </ul>
-                            <a href="#" class="buy-btn">Buy Now</a>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="pricing-item">
-                            <h3>Developer Plan</h3>
-                            <h4><sup>$</sup>49<span> / month</span></h4>
-                            <ul>
-                                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                            </ul>
-                            <a href="#" class="buy-btn">Buy Now</a>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
-                </div>
-
-            </div>
-
-        </section><!-- /Pricing Section -->
 
         <!-- Testimonials Section -->
         <section id="testimonials" class="testimonials section dark-background">

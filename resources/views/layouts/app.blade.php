@@ -34,11 +34,11 @@
 </head>
 
 <body class="@yield('body_class')">
-    @include('user.components.navbar')
+    @include('components.navbar')
 
     @yield('content')
 
-    @include('user.components.footer')
+    @include('components.footer')
 
     <!-- Vendor JS Files -->
     <!-- Scroll Top -->
