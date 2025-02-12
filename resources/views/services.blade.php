@@ -4,6 +4,149 @@
 
 @section('body_class', 'services-page')
 
+@push('styles')
+    <!-- Isotope -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <!-- GLightbox -->
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .services .isotope-filters {
+            padding: 0;
+            margin: 0 auto 20px auto;
+            list-style: none;
+            text-align: center;
+        }
+
+        .services .isotope-filters li {
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1;
+            color: #666666;
+            margin: 0 3px 10px 3px;
+            transition: all 0.3s ease-in-out;
+            border-radius: 50px;
+            background: #fff;
+        }
+
+        .services .isotope-filters li:hover,
+        .services .isotope-filters li.filter-active {
+            color: #fff;
+            background: #16507b;
+        }
+
+        /* Card Container Spacing */
+        .services .isotope-container {
+            margin: -15px;
+            /* Negative margin to counteract padding of items */
+        }
+
+        .services .isotope-item {
+            padding: 15px;
+            /* Creates space between cards */
+        }
+
+        .services .service-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #fff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease-in-out;
+            /* Added transition for smooth hover effect */
+        }
+
+        .services .service-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .services .service-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services .service-img img {
+            transition: 0.3s;
+            width: 100%;
+            height: 240px;
+            /* Fixed height for images */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+            margin-bottom: 15px;
+            /* Space after image */
+        }
+
+        .services .service-info {
+            padding: 25px 20px;
+            text-align: center;
+            flex-grow: 1;
+            /* Allow info section to grow */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Distribute content evenly */
+        }
+
+        .services .service-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #16507b;
+        }
+
+        .services .service-info p {
+            color: #777777;
+            font-size: 14px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            /* Allow paragraph to fill space */
+        }
+
+        .services .service-info .preview-link,
+        .services .service-info .details-link {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 16px;
+            color: #16507b;
+            line-height: 1;
+            transition: 0.3s;
+            margin: 4px;
+        }
+
+        .services .service-info .preview-link:hover,
+        .services .service-info .details-link:hover {
+            color: #1c7ed6;
+        }
+
+        /* Animation for items */
+        .isotope-item {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Entering animation */
+        .isotope-item.is-entering {
+            opacity: 0;
+            transform: scale(0.95) translateY(10px);
+        }
+
+        /* Hidden items */
+        .isotope-item.is-hidden {
+            opacity: 0;
+            transform: scale(0.95) translateY(-10px);
+        }
+    </style>
+@endpush
 @section('content')
     <main class="main">
 
@@ -24,12 +167,9 @@
 
         <!-- Featured Services Section -->
         <section id="featured-services" class="featured-services section">
-
             <div class="container">
-
                 <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-in" data-aos-delay="100">
                         <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
                         <div>
                             <h4 class="title">Lorem Ipsum</h4>
@@ -71,89 +211,47 @@
 
         <!-- Services Section -->
         <section id="services" class="services section">
-
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <span>Our Services<br></span>
-                <h2>Our ServiceS</h2>
+                <h2>Our Services</h2>
                 <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3>Storage</h3>
-                            <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam
-                                repellendus temporibus itaqueofficiis odit</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-2.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Logistics</a></h3>
-                            <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt
-                                molestiae dolor ipsam ducimus occaecati nisi</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-3.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Cargo</a></h3>
-                            <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque
-                                oluptatem aut et molestiae ut et nihil</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-4.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Trucking</a></h3>
-                            <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque
-                                oluptatem aut et molestiae ut et nihil</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-5.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3>Packaging</h3>
-                            <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum onsequuntur
-                                maiores beatae consequatur magni voluptates</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-6.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Warehousing</a></h3>
-                            <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi
-                                quisquam aut nostrum unde et qui est non quo nulla</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
-                </div>
-
             </div>
 
-        </section><!-- /Services Section -->
+            <div class="container">
+                <!-- Isotope Filters -->
+                <ul class="services-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter="*" class="filter-active">All</li>
+                    @foreach ($categories as $category)
+                        <li data-filter=".filter-{{ Str::slug($category->name) }}">{{ $category->name }}</li>
+                    @endforeach
+                </ul>
+
+                <!-- Isotope Container -->
+                <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                    @foreach ($services as $service)
+                        <div class="col-lg-4 col-md-6 isotope-item filter-{{ Str::slug($service->kategori->name) }}">
+                            <a href="" class="service-card-link">
+                                <div class="service-card">
+                                    <div class="service-img">
+                                        @if ($service->img_file_path)
+                                            <img src="{{ asset('storage/' . $service->img_file_path) }}"
+                                                alt="{{ $service->name }}" class="img-fluid">
+                                        @else
+                                            <img src="{{ asset('assets/img/service-default.jpg') }}"
+                                                alt="Default service image" class="img-fluid">
+                                        @endif
+                                    </div>
+                                    <div class="service-info">
+                                        <h3>{{ $service->name }}</h3>
+                                        <p>{{ $service->deskripsi }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
 
         <!-- Features Section -->
         <section id="features" class="features section">
@@ -480,3 +578,68 @@
 
     </main>
 @endsection
+
+@push('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            /**
+             * Initiate isotope layout and filters
+             */
+            let servicesContainer = document.querySelector('.isotope-container');
+            if (servicesContainer) {
+                let serviceIsotope = new Isotope(servicesContainer, {
+                    itemSelector: '.isotope-item',
+                    layoutMode: 'fitRows',
+                    filter: '*'
+                });
+
+                let servicesFilters = document.querySelectorAll('.services-filters li');
+
+                servicesFilters.forEach(function(filter) {
+                    filter.addEventListener('click', function(e) {
+                        e.preventDefault();
+
+                        // Remove filter-active class from all filters
+                        servicesFilters.forEach(function(el) {
+                            el.classList.remove('filter-active');
+                        });
+
+                        // Add filter-active class to clicked filter
+                        this.classList.add('filter-active');
+
+                        // Get the filter value
+                        let filterValue = this.getAttribute('data-filter');
+
+                        // Arrange isotope items
+                        serviceIsotope.arrange({
+                            filter: filterValue
+                        });
+
+                        // Update AOS
+                        AOS.refresh();
+                    });
+                });
+            }
+
+            /**
+             * Initiate GLightbox
+             */
+            const glightbox = GLightbox({
+                selector: '.glightbox'
+            });
+        });
+
+        serviceIsotope.on('layoutComplete', function(items) {
+            items.forEach(function(item) {
+                if (item.isLayoutInstant) {
+                    item.element.classList.remove('is-entering');
+                } else {
+                    item.element.classList.add('is-entering');
+                    setTimeout(function() {
+                        item.element.classList.remove('is-entering');
+                    }, 400); // Same as transition duration
+                }
+            });
+        });
+    </script>
+@endpush
